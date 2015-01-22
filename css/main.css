@@ -1,13 +1,19 @@
 /* Reasonable defaults */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
 body {
-    font-family: sans-serif;
-    line-height: 1.4em;
-    background: #F5F5F5;
-    color: #444;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 2em;
+    background: #0be9e4;
+    color: #333;
     padding: 2em;
+    text-align: center;
 }
 
-h1 { font-size: 2em; margin: .67em 0 }
+h1 { font-size: 2.5em; margin: .67em 0 }
 h2 { font-size: 1.5em; margin: .75em 0 }
 h3 { font-size: 1.17em; margin: .83em 0 }
 h5 { font-size: .83em; margin: 1.5em 0 }
@@ -30,16 +36,111 @@ a {
 button, input, select, textarea {
   font-size: inherit;
   outline: none;
+  display: table-cell;
 }
 
 button {
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 1em 1em;
   background: #2694f5;
   color: white;
   border: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  -webkit-box-shadow: inset 0px -10px 0px 0px #042d53;
+  -moz-box-shadow: inset 0px -10px 0px 0px #042d53;
+  box-shadow: inset 0px -10px 0px 0px #042d53;
+  border-radius: .1em;
+  height: 3em;
+  vertical-align: bottom;
+  margin: .25em .25em;
+  display: inline-block;
+}
+
+button:hover {
+    color: #e2e2e2;
+    background: #0b7fe9;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+button:active {
+    color: #e2e2e2;
+    -webkit-box-shadow: inset 0px -5px 0px 0px #042d53;
+    -moz-box-shadow: inset 0px -5px 0px 0px #042d53;
+    box-shadow: inset 0px -5px 0px 0px #042d53;
+    padding: .3em 1em .8em 1em;
+    height: 2.5em;
+    background: #0b7fe9;
 }
 
 input {
   padding: 0.5em;
-  border: 1px solid #999;
+  border: none;
+  border-radius: .1em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  width: 3em;
+  margin: .25em;
+}
+
+.panel {
+    width: 80%;
+    max-width: 65em;
+    margin: 5% auto;
+    background-color: #b9b9b9;
+    padding: 2em;
+    border-radius: .2em;
+    -webkit-box-shadow: 0px 10px 0px 0px #333;
+    -moz-box-shadow: 0px 10px 0px 0px #333;
+    box-shadow: 0px 10px 0px 0px #7a7a7a;
+}
+
+.calculator {
+    min-height: 22em;
+}
+
+.conversion {
+    min-height: 30em;
+}
+
+.guessing-game {
+    min-height: 17em;
+}
+
+h1 {
+    font-weight: normal;
+    text-align: center;
+    line-height: 1em;
+}
+
+h3, .guess-result {
+    color: #fff;
+}
+
+.output__line {
+    min-height: 5em;
+    /*vertical-align: bottom;*/
+    overfow: auto:
+    height: 100%;
+}
+
+.output {
+    width 90%;
+    margin: 0 auto;
+    text-align: left;
+    overflow: auto;
+    vertical-align: bottom;
+}
+
+/*.cell {
+    display: table-cell;
+    margin: 0 .25em 2em;
+}
+
+.equivalent {
+    display: block;
+}*/
+
+.result {
+    font-size: 3em;
+    color: #fff;
 }

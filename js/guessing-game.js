@@ -18,3 +18,43 @@
 // guess()
 //
 // Feel free to rename the guessValueAsString parameter
+
+
+var guessNum = 0;
+    mysteryNum = Math.floor(Math.random() * 10) + 1;
+    correctMessage = [
+        "CORRECT- You must be psychic!",
+        "THAT'S RIGHT- Are you cheating?!",
+        "SPOT ON- what are the chances?!",
+    ];
+    randomMessage = Math.floor(Math.random() * correctMessage.length);
+    guessCount = 0;
+
+function setGuessNum(guessNumString) {
+    guessNum = Number(guessNumString);
+}
+
+function guess() {
+    guessCount = ++guessCount;
+    if (guessNum === mysteryNum) {
+        document.querySelector('.guess-result').textContent = correctMessage[randomMessage] + " It took you " + guessCount + " attempt(s)"
+    }
+    else if (guessNum < mysteryNum) {
+        document.querySelector('.guess-result').textContent = "TOO SMALL- give it another go"
+    }
+    else {
+        document.querySelector('.guess-result').textContent = "TOO HIGH- try again"
+    }
+}
+
+function refreshPage() {
+    window.top.location=window.top.location;
+}
+
+// function resetGuessCount() {
+//     guessCount = 0;
+// }
+
+// function setGuessCount() {
+//     guessCount = guess().detail;
+// }

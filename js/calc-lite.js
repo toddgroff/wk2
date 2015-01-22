@@ -5,30 +5,39 @@
 // placing a comma between the variable
 // statements.
 var x = 0,
-    y = 0;
-    z = 0;
+    y = 0,
+    z = 0,
+    solution = 0;
 
 // add simply alerts the value of x + y
 function add() {
-  alert(x + y);
+  solution = x + y + z;
+  document.querySelector('.result').textContent = solution;
 }
 
 // subtract simply alerts the value of x - y
 function subtract() {
-  alert(x - y);
+  solution = x - y - z;
+  document.querySelector('.result').textContent = solution;
 }
+
 
 // divide alerts the value of x / y
 function divide() {
-    alert(x / y);
+    solution = x / z;
+    document.querySelector('.result').textContent = solution;
 }
 
 // multiply alerts the value of x * y
-    alert(x * y * z)
+function multiply() {
+    solution= x * y;
+    document.querySelector('.result').textContent = solution;
+}
 
 // mod simply alerts the value of x mod y
-function mod() {
-    alert(x % y);
+function modify() {
+    solution = x % z;
+    document.querySelector('.result').textContent = solution;
 }
 
 // setX takes a string as a parameter, casts it
@@ -45,6 +54,6 @@ function setY(yString) {
 
 // setY does the same thing as setX, only
 // storing the value in y
-function setY(yString) {
-    z = Number(yString);
+function setZ(zString) {
+    z = Number(zString);
 }

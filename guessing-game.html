@@ -3,21 +3,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Javascript 101</title>
+    <title>Guessing Game</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <main class="panel guessing-game">
+
     <h1>Guess a number from 1 - 10</h1>
+
+    <p>
+      <input type="text" onchange="setGuessNum(this.value)">
+      <button onclick="guess();">Guess</button>
+      <button onclick="refreshPage()">Go again</button>
+    </p>
 
     <h2 class="guess-result"></h2>
 
-    <p>
-      <input type="text" onchange="setGuess(this.value)">
-      <button onclick="guess()">Guess!</button>
-    </p>
-
     <script src="js/guessing-game.js"></script>
 
+    </main>
   </body>
 </html>
