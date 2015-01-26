@@ -179,7 +179,7 @@ h3, .guess-result {
     color: #fff;
 }
 
-.game-word, .turns-remaining {
+.turns-remaining {
     display: block;
 }
 
@@ -196,8 +196,10 @@ h3, .guess-result {
 
 
 .game-word {
+    display: block;
     font-size: 3em;
     padding-top: 1em;
+    z-index: 1000;
 }
 
 .wrong-letters {
@@ -229,6 +231,7 @@ h3, .guess-result {
     height: 10em;
     background-color: #2694f5;
     position: relative;
+    z-index: -1;
 }
 
 .ice-water: {
