@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Thin Ice</title>
+        <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="game-screen">
+    <div class="game-content">
+        <h1 class="thin-ice">Thin Ice</h1>
+        <h2 class="thin-ice-message">Guess the right letters before the ice cracks!</h2>
+        <div class="game-info">
+            <span class="wrong-letters">
+                Wrong Guesses: <span class="letters"></span>
+            </span>
+            <span class="turns-remaining">
+                Turns: <span class="turn-count">8</span>
+            </span>
+        </div>
+        <div class="guess-section">
+            <input class="guess-input" pattern="(a-zA-Z)" type="text" maxlength="1" onchange="setGuess(this.value)">
+            <button class="guess-btn" onclick="checkGuess()">Guess</button>
+        </div>
+        <span class="game-word">
+        </span>
+    </div>
+    <div class="ice-section">
+        <div class="ice-water">
+        </div>
+        <div class="ice-piece ice-1">
+        </div>
+        <div class="ice-piece ice-2">
+        </div>
+        <div class="ice-piece ice-3">
+        </div>
+    </div>
+</body>
+
+<script src="js/hangman-words.js"></script>
+<script src="js/hangman.js"></script>
+
+</html>

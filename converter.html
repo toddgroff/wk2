@@ -30,27 +30,30 @@
         -->
         <!--
         onclick fires whenever the user clicks an element -->
+    <div class="conversion-table">
 
         <div class="output__line">
-            <input type="text" onchange="setQuarts(this.value)"> QUARTS
-            <button onclick="convertQuartsCups()">=</button>
-            <input type="text" onchange="setCups(this.value)"> CUPS
-            <h3 class="quarts-cups"></h3>
+            <input class="cell" type="text" onchange="setQuarts(this.value)"> QUARTS
+            <button class="cell" onclick="convertQuartsCups()">=</button>
+            <input class="cell" type="text" onchange="setCups(this.value)"> CUPS
+            <h3 class="quarts-cups output__line"></h3>
         </div>
 
         <div class="output__line">
-            <input type="text" onchange="setMeters(this.value)"> METERS
-            <button onclick="convertMetersYards()">=</button>
-            <input type="text" onchange="setYards(this.value)"> YARDS
-            <h3 class="meters-yards"></h3>
+            <input class="cell" type="text" onchange="setMeters(this.value)"> METERS
+            <button class="cell" onclick="convertMetersYards()">=</button>
+            <input class="cell" type="text" onchange="setYards(this.value)"> YARDS
+            <h3 class="meters-yards output__line"></h3>
         </div>
 
         <div class="output__line">
-            <input type="text" onchange="setCelcius(this.value)">&deg; CELCIUS
-            <button onclick="convertCelciusFahrenheit()">=</button>
-            <input type="text" onchange="setFahrenheit(this.value)">&deg; FAHRENHEIT
-            <h3 class="celcius-fahrenheit"></h3>
+            <input class="cell" type="text" onchange="setCelcius(this.value)">&deg; CELCIUS
+            <button class="cell"  onclick="convertCelciusFahrenheit()">=</button>
+            <input type="text" class="cell" onchange="setFahrenheit(this.value)">&deg; FAHRENHEIT
+            <h3 class="celcius-fahrenheit output__line"></h3>
         </div>
+
+    </div>
     </main>
 
 <script src="js/converter.js"></script>

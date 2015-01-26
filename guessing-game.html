@@ -10,10 +10,10 @@
   <body>
     <main class="panel guessing-game">
 
-    <h1>Guess a number from 1 - 10</h1>
+    <h1>Guess a number from <span class="one-ten">1 – 10</span></h1>
 
     <p>
-      <input type="text" onchange="setGuessNum(this.value)">
+      <input type="text" class="guess-input" onchange="setGuessNum(this.value)">
       <button onclick="guess();">Guess</button>
       <button onclick="refreshPage()">Go again</button>
     </p>

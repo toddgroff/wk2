@@ -20,8 +20,8 @@
 // Feel free to rename the guessValueAsString parameter
 
 
-var guessNum = 0;
-    mysteryNum = Math.floor(Math.random() * 10) + 1;
+var guessNum = 0,
+    mysteryNum = Math.floor(Math.random() * 10) + 1,
     correctMessage = [
         "CORRECT- You must be psychic!",
         "THAT'S RIGHT- Are you cheating?!",
@@ -41,9 +41,11 @@ function guess() {
     }
     else if (guessNum < mysteryNum) {
         document.querySelector('.guess-result').textContent = "TOO SMALL- give it another go"
+        document.querySelector('.guess-input').value = '';
     }
     else {
         document.querySelector('.guess-result').textContent = "TOO HIGH- try again"
+        document.querySelector('.guess-input').value = '';
     }
 }
 
